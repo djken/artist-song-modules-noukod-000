@@ -1,4 +1,4 @@
-module Paramable  
+module Paramable
   module InstanceMethods
     def to_param
       name.downcase.gsub(' ', '-')
@@ -10,7 +10,7 @@ module Findable
   module ClassMethods
     def find_by_name(name)
       self.all.detect{|o| o.name}
-    end    
+    end
   end
 end
 
@@ -24,7 +24,7 @@ module Memorable
       self.all.count
     end
   end
-  
+
   module InstanceMethods
     def initialize
       self.class.all << self
